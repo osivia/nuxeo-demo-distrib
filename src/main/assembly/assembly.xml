@@ -17,7 +17,7 @@
 			<scope>runtime</scope>
 			<includes>
 				<!-- OpenToutatice -->
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-attached-files:jar:${opentoutatice.version}
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-attached-files:jar:${opentoutatice.version}
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-automation:jar:${opentoutatice.version}
 				</include>
@@ -53,22 +53,18 @@
 				</include>
 				<include>opentoutatice-ecm.procedures:opentoutatice-addon-procedures-ecm:jar:${ottc.procedure.version}
 				</include>
-				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
-				</include>
 				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
                 </include>
-				<include>opentoutatice-ecm.toutapad:opentoutatice-addon-toutapad-ecm:jar:${ottc.pad.version}
-                </include>  
                 <include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
                 </include>              
 
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
 				</include>
-				
-				<!-- Fulltext reindexation (batch) -->
-                <include>org.nuxeo:nuxeo-reindex-fulltext:jar:${nuxeo.reindex.fulltext.version}
-                </include>
+			
+				<!-- Custom CNS -->
+				<include>org.osivia.demo:proto-cns-nuxeo-custom:jar:${cns.custom.version}
+				</include>
 			</includes>
 		</dependencySet>
 	
@@ -169,11 +165,6 @@
 				<include>net.bull.javamelody:javamelody-core:jar:1.62.0
                 </include>
                 <include>org.jrobin:jrobin:jar:1.5.9
-                </include>
-                <!--  Dependencides for etherpad client -->
-                <include>org:etherpad_lite_client:jar:1.2.7
-                </include>
-                <include>com.googlecode.json-simple:json-simple:jar:1.1.1
                 </include>
 			</includes>
 		</dependencySet>
