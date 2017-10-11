@@ -3,5 +3,5 @@ cns.target=.
 ##----------------------------------------------------------------------------
 ## DOMAIN SECURITY POLICY
 ##----------------------------------------------------------------------------
-cns.domainSecurity.allowedProfiles=ged-cns
-cns.domainSecurity.restrictedDomain=CNS_commun
+cns.domainSecurity.allowedProfiles=CNS_commun
+cns.domainSecurity.restrictedDomain=ged-cns
