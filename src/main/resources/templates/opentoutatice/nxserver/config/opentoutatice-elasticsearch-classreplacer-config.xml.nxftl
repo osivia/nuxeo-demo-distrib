@@ -8,7 +8,7 @@
   <extension target="org.nuxeo.ecm.platform.query.api.PageProviderService" point="replacers">
 
     <replacer withClass="fr.toutatice.ecm.elasticsearch.provider.TTCElasticSearchNxqlPageProvider"
-      enabled="${elasticsearch.enabled:=true}">
+      enabled="${r"${elasticsearch.enabled:=true}"}">
 <#list ppNames as ppName>
       <provider>${ppName?trim}</provider>
 </#list>
