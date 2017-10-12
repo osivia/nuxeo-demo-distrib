@@ -1,4 +1,28 @@
+nuxeo.template.includes=postgresql
 opentoutatice.target=.
+
+#==============================================
+## Full Elasticsearch Mode
+##==============================================
+
+#elasticsearch.fetchDocFromEs=false
+
+ottc.es.indexing.sync.force=true
+ottc.querying.es.force=true
+
+## Disable ACLs optimization:
+nuxeo.vcs.optimizations.acl.enabled=false
+
+##========================
+## Fulltext Analyzer
+##========================
+nuxeo.vcs.fulltext.search.analyzer=french
+
+
+##----------------------------------------------------------------------------
+## Task queries in ES
+##----------------------------------------------------------------------------
+elasticsearch.override.pageproviders=default_search,GET_TASKS_FOR_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENT,GET_TASKS_FOR_TARGET_DOCUMENTS,GET_TASKS_FOR_TARGET_DOCUMENT_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS,GET_TASKS_FOR_TARGET_DOCUMENTS_AND_ACTORS_OR_DELEGATED_ACTORS
 
 ##----------------------------------------------------------------------------
 ## States stack
@@ -47,10 +71,18 @@ ottc.news.scan.daily.boundary=240
 ottc.news.scan.weekly.boundary=720
 ottc.news.scan.error.boundary=120
 
+## Transaction timeout
+#ottc.scan.transaction.timeout=900
+
 ottc.news.portal.url=http://<host>/portal/share/
 
 ## Test mode
 ottc.news.mode.test=false
+## Error test mode
+ottc.scan.error.test.mode=false
+
+## Send mail or not
+ottc.news.scan.send.mail=true
 
 # Filers conditions
 ottc.news.scan.accept.subscr.test=false
