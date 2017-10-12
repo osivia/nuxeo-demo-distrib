@@ -112,6 +112,26 @@ ottc.volatile.drive.token.cache.ttl=1
 
 ottc.portal.drive.sync.enabled=false
 
+##----------------------------------------------------------------------------
+## soffice user environments pool size
+##----------------------------------------------------------------------------
+ottc.converter.toutaticeAny2pdf.poolSize=10
+
+##-----------------------------------------------------------------------------
+## 4.6 Migration
+##-----------------------------------------------------------------------------
+
+ottc.migration.pictures.enabled=false
+ottc.migration.facets.enabled=true
+ottc.migration.posts.enabled=true
+ottc.migration.ids.enabled=false
+ottc.migration.forums.enabled=false
+
+ottc.migration.facets.force=true
+ottc.migration.pictures.force=false
+ottc.migration.posts.force=true
+ottc.migration.ids.force=false
+ottc.migration.forums.force=false
 
 ##----------------------------------------------------------------------------
 ## Metrics
@@ -127,7 +147,4 @@ ottc.portal.drive.sync.enabled=false
 #metrics.graphite.period=10
 
 #metrics.tomcat.enabled=true
-
-# soffice user environments pool size
-ottc.converter.toutaticeAny2pdf.poolSize=10
 
