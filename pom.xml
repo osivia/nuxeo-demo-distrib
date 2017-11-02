@@ -30,7 +30,9 @@
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
-		<cns.custom.version>1.12-RC01</cns.custom.version>	
+		<cns.custom.version>1.12-RC01</cns.custom.version>
+		
+		<migration.version>4.6.1</migration.version>	
 		
 	</properties>
 
@@ -223,6 +225,14 @@
             <artifactId>proto-cns-nuxeo-custom</artifactId>
             <version>${cns.custom.version}</version>
         </dependency>        
+        
+        <!-- Migration -->
+        <dependency>
+			<groupId>org.osivia.opentoutatice.migrations</groupId>
+			<artifactId>osivia-opentoutatice-migration</artifactId>
+			<version>${migration.version}</version>
+		</dependency>
+
 
 		<!-- Agenda -->
 		<dependency>

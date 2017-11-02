@@ -65,6 +65,10 @@
 				<!-- Custom CNS -->
 				<include>org.osivia.demo:proto-cns-nuxeo-custom:jar:${cns.custom.version}
 				</include>
+				
+				<!-- Migration -->
+				<include>org.osivia.opentoutatice.migrations:osivia-opentoutatice-migration:jar:${migration.version}
+				</include>
 			</includes>
 		</dependencySet>
 	
