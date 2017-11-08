@@ -5,7 +5,7 @@
 
 	<groupId>fr.gouv.education.cns</groupId>
 	<artifactId>cns-nx-distrib</artifactId>
-	<version>4.6-SNAPSHOT</version>
+	<version>4.6</version>
 	<name>CNS nuxeo distribution</name>
 	<packaging>pom</packaging>
 
@@ -455,7 +455,7 @@
 	</dependencies>
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/ottc-collab/trunk</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/ottc-collab/tags/4.6</developerConnection>
     </scm>
     
     
