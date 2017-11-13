@@ -1,8 +1,0 @@
-nuxeo.template.includes=opentoutatice
-cns.target=.
-
-##----------------------------------------------------------------------------
-## DOMAIN SECURITY POLICY
-##----------------------------------------------------------------------------
-cns.domainSecurity.allowedProfiles=CNS_commun
-cns.domainSecurity.restrictedDomain=ged-cns

@@ -3,10 +3,10 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.gouv.education.cns</groupId>
-	<artifactId>cns-nx-distrib</artifactId>
-	<version>4.6</version>
-	<name>CNS nuxeo distribution</name>
+	<groupId>org.osivia.demo</groupId>
+	<artifactId>demo-nx-distrib</artifactId>
+	<version>4.6-SNAPSHOT</version>
+	<name>Démo nuxeo distribution</name>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -26,14 +26,10 @@
 
 		<ottc.es.custom.version>4.6</ottc.es.custom.version>
 		<ottc.procedure.version>4.6</ottc.procedure.version>
-		
+		<ottc.pad.version>3.4.0</ottc.pad.version>		
 		<ottc.news.version>4.6-RC1</ottc.news.version>
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
-		
-		<cns.custom.version>1.12</cns.custom.version>
-		
-		<migration.version>4.6.1</migration.version>	
 		
 	</properties>
 
@@ -109,7 +105,7 @@
 				<artifactId>maven-release-plugin</artifactId>
 				<version>2.2.1</version>
 				<configuration>
-					<tagBase>http://www.osivia.org/repos/osivia-services/nx-distributions/cns/tags</tagBase>
+					<tagBase>http://www.osivia.org/repos/osivia-services/nx-distributions/demo/tags</tagBase>
 					<releaseProfiles>unpack,pack</releaseProfiles>
 					<preparationGoals>clean install</preparationGoals>
 					<goals>deploy</goals>
@@ -214,6 +210,11 @@
 		    <version>${ottc.checkin.version}</version>
 		</dependency>
 		<dependency>
+		    <groupId>opentoutatice-ecm.toutapad</groupId>
+		    <artifactId>opentoutatice-addon-toutapad-ecm</artifactId>
+		    <version>${ottc.pad.version}</version>
+		</dependency>
+		<dependency>
             <groupId>opentoutatice-ecm.news</groupId>
             <artifactId>opentoutatice-addon-news-ecm</artifactId>
             <version>${ottc.news.version}</version>
@@ -224,20 +225,6 @@
             <artifactId>opentoutatice-monitoring-ecm</artifactId>
             <version>${ottc.monitoring.version}</version>
         </dependency>
-        
-		<!-- Custom CNS -->
-		<dependency>
-		    <groupId>org.osivia.demo</groupId>
-            <artifactId>proto-cns-nuxeo-custom</artifactId>
-            <version>${cns.custom.version}</version>
-        </dependency>        
-        
-        <!-- Migration -->
-        <dependency>
-			<groupId>org.osivia.opentoutatice.migrations</groupId>
-			<artifactId>osivia-opentoutatice-migration</artifactId>
-			<version>${migration.version}</version>
-		</dependency>
 
 
 		<!-- Agenda -->
@@ -451,11 +438,22 @@
         </dependency>
 		
 
+		<!-- Pad client -->
+		<dependency>
+			<groupId>org</groupId>
+			<artifactId>etherpad_lite_client</artifactId>
+			<version>1.2.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+        	<version>1.1.1</version>
+		</dependency>
 		
 	</dependencies>
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/cns/tags/4.6</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/demo/trunk</developerConnection>
     </scm>
     
     
