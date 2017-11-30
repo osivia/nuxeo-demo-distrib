@@ -48,8 +48,8 @@
        <loginModulePlugin>Trusting_LM</loginModulePlugin>
 	<stateful>true</stateful>
        <parameters>
-         <parameter name="secret">${nuxeo.auth.secret.key}</parameter>
-         <parameter name="maxAge">${nuxeo.auth.max.age}</parameter>
+         <parameter name="secret">secretKey</parameter>
+         <parameter name="maxAge">3600</parameter>
        </parameters>
       </authenticationPlugin>
     </extension>

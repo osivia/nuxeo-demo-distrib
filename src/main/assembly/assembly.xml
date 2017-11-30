@@ -33,14 +33,14 @@
 				<!-- Add ons -->				
 				<include>opentoutatice-ecm.elasticsearch:opentoutatice-addon-elasticsearch-ecm:jar:${ottc.es.version}
 				</include>
-				<include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
+				<!-- <include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
 				</include>
 				<include>opentoutatice-ecm.file-versioning:opentoutatice-addon-file-versioning-ecm:jar:${ottc.file.versioning.version}
 				</include>
 				<include>opentoutatice-ecm.portal-notifications:opentoutatice-addon-portal-notifications-ecm:jar:${ottc.notif.version}
 				</include>
 				<include>opentoutatice-ecm.ui:opentoutatice-addon-simple-ui-ecm:jar:${ottc.ui.version}
-				</include>
+				</include> -->
 				<include>opentoutatice-ecm.workflows-integration:opentoutatice-addon-workflows-integration-ecm:jar:${ottc.wf.version}
 				</include>
 				<include>opentoutatice-ecm.collab-tools:opentoutatice-collab-tools-ecm:jar:${ottc.collab.version}
@@ -53,19 +53,27 @@
 				</include>
 				<include>opentoutatice-ecm.procedures:opentoutatice-addon-procedures-ecm:jar:${ottc.procedure.version}
 				</include>
-				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
+				<!-- <include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
 				</include>
 				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
                 </include>
 				<include>opentoutatice-ecm.toutapad:opentoutatice-addon-toutapad-ecm:jar:${ottc.pad.version}
                 </include>  
                 <include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
-                </include>              
+                </include>            -->   
 
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
 				</include>
-
+				
+				<!-- JSF compatibility -->
+				<include>org.nuxeo.theme:nuxeo-theme-bank:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-core:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-fragments:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-html:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-jsf:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-webapp-compat:jar:${nuxeo.jsf.compat.version}</include>
+				<include>org.nuxeo.theme:nuxeo-theme-webengine:jar:${nuxeo.jsf.compat.version}</include>
 			</includes>
 		</dependencySet>
 	
@@ -76,7 +84,7 @@
 			<scope>runtime</scope>
 			<includes>
 				<!-- Nuxeo Agenda -->
-				<include>org.nuxeo.ecm.platform:nuxeo-agenda:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-agenda-core:jar:${nuxeo.version}
 				</include>
 				<!-- Nuxeo Imaging -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-api:jar:${nuxeo.version}
@@ -85,11 +93,7 @@
 				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-core:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-dm:jar:${nuxeo.version}
-				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-jsf:jar:${nuxeo.version}
-				</include>
-				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-preview:jar:${nuxeo.version}
 				</include>
 				<!-- Audio -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-audio-core:jar:${nuxeo.version}
@@ -105,18 +109,18 @@
                 </include>
                  <include>org.nuxeo.ecm.platform:nuxeo-platform-video-jsf:jar:${nuxeo.version}
                 </include>
-				<!-- Webengine -->
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.version}
+				<!-- Blogs && Sites -->
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-api:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-api:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-core:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-core:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-api:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-api:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-core-contrib:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-core-contrib:jar:${nuxeo.blogs.sites.version}
 				</include>
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-cas2:jar:${nuxeo.version}
@@ -130,8 +134,8 @@
 				</include>
 				<include>org.nuxeo.lib.core:nuxeo-core-storage-sql-extensions:jar:${nuxeodrive.version}
 				</include>
-				<include>org.nuxeo.lib.wss:nuxeo-wss-front:jar:${nuxeodrive.version}
-				</include>
+				<!-- <include>org.nuxeo.lib.wss:nuxeo-wss-front:jar:${nuxeodrive.version}
+				</include> -->
 				<!-- Platform explorer -->
 				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version}
 				</include>
@@ -149,6 +153,8 @@
 			<unpack>false</unpack>
 			<scope>runtime</scope>
 			<includes>
+				<!-- Dependency for JSF compatibility -->
+				<include>com.phloc:phloc-css:jar:3.1.1</include>
 				<!-- Dependencies for imaging -->
 				<include>net.java.dev.mistral:EditableImage:jar:0.9.5
 				</include>
@@ -160,7 +166,7 @@
 				</include>
 				<include>net.java.dev.mistral:Operations:jar:0.9.5
 				</include>
-				<include>org.jsoup:jsoup:jar:1.6.3
+				<include>org.jsoup:jsoup:jar:1.8.1
 				</include>
 				<!-- Dependencies for Java Melody monitoring -->
 				<include>net.bull.javamelody:javamelody-core:jar:1.62.0
@@ -182,7 +188,7 @@
 		<fileSet>
 			<outputDirectory>/${artifactId}-${project.version}
 			</outputDirectory>
-			<directory>target/nuxeo-distrib/nuxeo-cap-${nuxeo.version}-tomcat</directory>
+			<directory>target/nuxeo-distrib/nuxeo-server-${nuxeo.version}-tomcat</directory>
 			<includes>
 				<include>**</include>
 			</includes>
