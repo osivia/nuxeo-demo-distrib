@@ -5,29 +5,29 @@
 
 	<groupId>org.osivia.demo</groupId>
 	<artifactId>demo-nx-distrib</artifactId>
-	<version>4.6-SNAPSHOT</version>
+	<version>4.7-SNAPSHOT</version>
 	<name>Démo nuxeo distribution</name>
 	<packaging>pom</packaging>
 
 	<properties>
 		<nuxeo.version>6.0-HF42</nuxeo.version>
 		<nuxeodrive.version>6.0-HF42</nuxeodrive.version>
-		<opentoutatice.version>4.6.5</opentoutatice.version>
-		<ottc.es.version>4.6.2</ottc.es.version>
-		<ottc.collab.version>4.6</ottc.collab.version>
+		<opentoutatice.version>4.7-SNAPSHOT</opentoutatice.version>
+		<ottc.es.version>4.7-SNAPSHOT</ottc.es.version>
+		<ottc.collab.version>4.7-SNAPSHOT</ottc.collab.version>
 		<ottc.filenaming.version>4.6</ottc.filenaming.version>
-		<ottc.file.versioning.version>4.6</ottc.file.versioning.version>
-		<ottc.wf.version>4.6</ottc.wf.version>
+		<ottc.file.versioning.version>4.7-SNAPSHOT</ottc.file.versioning.version>
+		<ottc.wf.version>4.7-SNAPSHOT</ottc.wf.version>
 		<ottc.notif.version>4.6</ottc.notif.version>
-		<ottc.ui.version>4.6.1</ottc.ui.version>
-		<ottc.drive.version>4.6.2</ottc.drive.version>
+		<ottc.ui.version>4.7-SNAPSHOT</ottc.ui.version>
+		<ottc.drive.version>4.7-SNAPSHOT</ottc.drive.version>
 		<ottc.generic-ui.version>4.6</ottc.generic-ui.version>
-		<ottc.checkin.version>4.6.1</ottc.checkin.version> 
+		<ottc.checkin.version>4.7-SNAPSHOT</ottc.checkin.version> 
 
 		<ottc.es.custom.version>4.6</ottc.es.custom.version>
 		<ottc.procedure.version>4.6</ottc.procedure.version>
-		<ottc.pad.version>4.6</ottc.pad.version>		
-		<ottc.news.version>4.6</ottc.news.version>
+		<ottc.pad.version>4.7-SNAPSHOT</ottc.pad.version>		
+		<ottc.news.version>4.7-SNAPSHOT</ottc.news.version>
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
