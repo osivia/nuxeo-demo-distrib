@@ -31,6 +31,8 @@
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
+		<demo.version>4.7-SNAPSHOT</demo.version>
+		
 	</properties>
 
 	<build>
@@ -225,6 +227,14 @@
             <artifactId>opentoutatice-monitoring-ecm</artifactId>
             <version>${ottc.monitoring.version}</version>
         </dependency>
+        
+        <!-- custom demo -->
+        <dependency>
+			<groupId>org.osivia.demo</groupId>
+    		<artifactId>demo-nx-custom</artifactId>
+    		<version>${demo.version}</version>        
+        </dependency>
+        
 
 
 		<!-- Agenda -->

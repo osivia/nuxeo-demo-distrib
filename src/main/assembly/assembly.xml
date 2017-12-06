@@ -66,6 +66,8 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
 				</include>
 
+				<include>org.osivia.demo:demo-nx-custom:jar:${demo.version}
+				</include>
 			</includes>
 		</dependencySet>
 	
