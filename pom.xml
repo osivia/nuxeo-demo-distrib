@@ -214,11 +214,6 @@
 		    <version>${ottc.checkin.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>opentoutatice-ecm.toutapad</groupId>
-		    <artifactId>opentoutatice-addon-toutapad-ecm</artifactId>
-		    <version>${ottc.pad.version}</version>
-		</dependency>
-		<dependency>
             <groupId>opentoutatice-ecm.news</groupId>
             <artifactId>opentoutatice-addon-news-ecm</artifactId>
             <version>${ottc.news.version}</version>
