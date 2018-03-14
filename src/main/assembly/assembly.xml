@@ -57,7 +57,7 @@
 				</include>
 				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
                 </include>
-				<include>opentoutatice-ecm.toutapad:opentoutatice-addon-toutapad-ecm:jar:${ottc.pad.version}
+				<include>opentoutatice-ecm.web-mode:opentoutatice-web-mode-ecm:jar:${webmode.version}
                 </include>  
                 <include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
                 </include>              
@@ -168,11 +168,6 @@
 				<include>net.bull.javamelody:javamelody-core:jar:1.62.0
                 </include>
                 <include>org.jrobin:jrobin:jar:1.5.9
-                </include>
-                <!--  Dependencides for etherpad client -->
-                <include>org:etherpad_lite_client:jar:1.2.7
-                </include>
-                <include>com.googlecode.json-simple:json-simple:jar:1.1.1
                 </include>
 			</includes>
 		</dependencySet>

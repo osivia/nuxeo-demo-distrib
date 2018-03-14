@@ -17,21 +17,23 @@
 		<ottc.collab.version>4.7-SNAPSHOT</ottc.collab.version>
 		<ottc.filenaming.version>4.6</ottc.filenaming.version>
 		<ottc.file.versioning.version>4.7-SNAPSHOT</ottc.file.versioning.version>
-		<ottc.wf.version>4.7-SNAPSHOT</ottc.wf.version>
-		<ottc.notif.version>4.6</ottc.notif.version>
-		<ottc.ui.version>4.7-SNAPSHOT</ottc.ui.version>
-		<ottc.drive.version>4.7-SNAPSHOT</ottc.drive.version>
+		<ottc.wf.version>4.6</ottc.wf.version>
+		<ottc.notif.version>4.7-SNAPSHOT</ottc.notif.version>
+		
+		<ottc.ui.version>4.6.1</ottc.ui.version>
+		<ottc.drive.version>4.6.2</ottc.drive.version>
 		<ottc.generic-ui.version>4.6</ottc.generic-ui.version>
-		<ottc.checkin.version>4.7-SNAPSHOT</ottc.checkin.version> 
+		<ottc.checkin.version>4.6.1</ottc.checkin.version> 
 
-		<ottc.es.custom.version>4.6</ottc.es.custom.version>
-		<ottc.procedure.version>4.6</ottc.procedure.version>
-		<ottc.pad.version>4.7-SNAPSHOT</ottc.pad.version>		
-		<ottc.news.version>4.7-SNAPSHOT</ottc.news.version>
+		<ottc.es.custom.version>4.7-SNAPSHOT</ottc.es.custom.version>
+		<ottc.procedure.version>4.7-SNAPSHOTs</ottc.procedure.version>
+		
+		<ottc.news.version>4.6</ottc.news.version>
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
 		<demo.version>4.7-SNAPSHOT</demo.version>
+		<webmode.version>4.7-SNAPSHOT</webmode.version>
 		
 	</properties>
 
@@ -221,6 +223,11 @@
             <artifactId>opentoutatice-addon-news-ecm</artifactId>
             <version>${ottc.news.version}</version>
         </dependency>
+		<dependency>
+            <groupId>opentoutatice-ecm.web-mode</groupId>
+            <artifactId>opentoutatice-web-mode-ecm</artifactId>
+            <version>${webmode.version}</version>
+        </dependency>        
         
         <dependency>
             <groupId>opentoutatice-ecm.monitoring</groupId>
@@ -447,19 +454,6 @@
             <version>1.5.9</version>
         </dependency>
 		
-
-		<!-- Pad client -->
-		<dependency>
-			<groupId>org</groupId>
-			<artifactId>etherpad_lite_client</artifactId>
-			<version>1.2.7</version>
-		</dependency>
-		<dependency>
-		    <groupId>com.googlecode.json-simple</groupId>
-    		<artifactId>json-simple</artifactId>
-        	<version>1.1.1</version>
-		</dependency>
-		
 	</dependencies>
 
     <scm>
@@ -484,5 +478,19 @@
         <url>http://www.osivia.org/</url>
     </organization>
     
+    <profiles>
+    	<profile>
+    		<id>ci</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<distributionManagement>
+    			<snapshotRepository>
+            		<id>galactica-ci-snapshots</id>
+            		<url>http://nexus:8081/repository/ci-snapshots</url>
+        		</snapshotRepository>
+    		</distributionManagement>
+    	</profile>
+    </profiles>    
 
 </project>
