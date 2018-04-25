@@ -5,7 +5,7 @@
 
 	<groupId>org.osivia.demo</groupId>
 	<artifactId>demo-nx-distrib</artifactId>
-	<version>4.7-SNAPSHOT</version>
+	<version>4.7.1</version>
 	<name>Démo nuxeo distribution</name>
 	<packaging>pom</packaging>
 
@@ -452,7 +452,7 @@
 	</dependencies>
 
     <scm>
-        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/demo/trunk</developerConnection>
+        <developerConnection>scm:svn:http://www.osivia.org/repos/osivia-services/nx-distributions/demo/tags/4.7.1</developerConnection>
     </scm>
     
     
