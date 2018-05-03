@@ -17,50 +17,57 @@
 			<scope>runtime</scope>
 			<includes>
 				<!-- OpenToutatice -->
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-attached-files:jar:${opentoutatice.version}
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-core:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice-ecm.platform:opentoutatice-core-logical-uid:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice-ecm.platform:opentoutatice-core-type-enricher:jar:${opentoutatice.version}
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-automation:jar:${opentoutatice.version}
 				</include>
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-core:jar:${opentoutatice.version}
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-services:jar:${opentoutatice.version}
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-services:jar:${opentoutatice.version}
 				</include>
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-web:jar:${opentoutatice.version}
-				</include>
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-reporting:jar:${opentoutatice.version}
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-probes:jar:${opentoutatice.version}
                 </include>
-
-				<!-- Add ons -->				
+                
 				<include>opentoutatice-ecm.elasticsearch:opentoutatice-addon-elasticsearch-ecm:jar:${ottc.es.version}
 				</include>
-				<include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
+				<include>opentoutatice-ecm.elasticsearch-customizer:opentoutatice-addon-elasticsearch-customizer-ecm:jar:${ottc.es.custom.version}
+				</include>
+				<include>opentoutatice-ecm.web-mode:opentoutatice-web-mode-ecm:jar:${webmode.version}
+                </include>  
+				<include>opentoutatice-ecm.procedures:opentoutatice-addon-procedures-ecm:jar:${ottc.procedure.version}
+				</include>
+				
+				<include>opentoutatice-ecm.collab-tools:opentoutatice-collab-tools-ecm:jar:${ottc.collab.version}
+				</include>
+				
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-web:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice.ui:opentoutatice-jsf-portal-views:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice.ui:opentoutatice-jsf-tinymce:jar:${opentoutatice.version}
+				</include>
+
+				<!-- Add ons -->				
+			<!-- 	<include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
 				</include>
 				<include>opentoutatice-ecm.file-versioning:opentoutatice-addon-file-versioning-ecm:jar:${ottc.file.versioning.version}
 				</include>
 				<include>opentoutatice-ecm.portal-notifications:opentoutatice-addon-portal-notifications-ecm:jar:${ottc.notif.version}
 				</include>
-				<include>opentoutatice-ecm.ui:opentoutatice-addon-simple-ui-ecm:jar:${ottc.ui.version}
-				</include>
 				<include>opentoutatice-ecm.workflows-integration:opentoutatice-addon-workflows-integration-ecm:jar:${ottc.wf.version}
 				</include>
-				<include>opentoutatice-ecm.collab-tools:opentoutatice-collab-tools-ecm:jar:${ottc.collab.version}
-				</include>
 				<include>opentoutatice-ecm.drive:opentoutatice-drive:jar:${ottc.drive.version}
-				</include>
-				<include>opentoutatice-ecm.generic-ui-service:opentoutatice-generic-ui-service-ecm:jar:${ottc.generic-ui.version}
-				</include>
-				<include>opentoutatice-ecm.elasticsearch-customizer:opentoutatice-addon-elasticsearch-customizer-ecm:jar:${ottc.es.custom.version}
-				</include>
-				<include>opentoutatice-ecm.procedures:opentoutatice-addon-procedures-ecm:jar:${ottc.procedure.version}
 				</include>
 				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
 				</include>
 				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
                 </include>
-				<include>opentoutatice-ecm.web-mode:opentoutatice-web-mode-ecm:jar:${webmode.version}
-                </include>  
                 <include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
-                </include>              
+                </include> -->              
 
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
@@ -78,7 +85,7 @@
 			<scope>runtime</scope>
 			<includes>
 				<!-- Nuxeo Agenda -->
-				<include>org.nuxeo.ecm.platform:nuxeo-agenda:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-agenda-core:jar:${nuxeo.agenda.version}
 				</include>
 				<!-- Nuxeo Imaging -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-api:jar:${nuxeo.version}
@@ -87,11 +94,9 @@
 				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-core:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-dm:jar:${nuxeo.version}
-				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-jsf:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-preview:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-tiling-preview:jar:${nuxeo.version}
 				</include>
 				<!-- Audio -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-audio-core:jar:${nuxeo.version}
@@ -107,24 +112,26 @@
                 </include>
                  <include>org.nuxeo.ecm.platform:nuxeo-platform-video-jsf:jar:${nuxeo.version}
                 </include>
-				<!-- Webengine -->
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.version}
+				<!-- Blogs & Sites (deprecated) -->
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-api:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-api:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-core:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-core:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-api:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-api:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-core-contrib:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-core-contrib:jar:${nuxeo.blogs.sites.version}
+				</include>
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.blogs.sites.version}
 				</include>
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-cas2:jar:${nuxeo.version}
 				</include>
 				<!-- Nuxeo Drive -->
-				<include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeodrive.version}
+				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeodrive.version}
 				</include>
 				<include>org.nuxeo.ecm:nuxeo-drive-jsf:jar:${nuxeodrive.version}
 				</include>
@@ -133,14 +140,14 @@
 				<include>org.nuxeo.lib.core:nuxeo-core-storage-sql-extensions:jar:${nuxeodrive.version}
 				</include>
 				<include>org.nuxeo.lib.wss:nuxeo-wss-front:jar:${nuxeodrive.version}
-				</include>
+				</include> -->
 				<!-- Platform explorer -->
-				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version}
+				<!-- <include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version}
 				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-webengine:jar:${nuxeo.version}
 				</include>
 				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.version}
-				</include>
+				</include> -->
 			</includes>
 		</dependencySet>
 
@@ -179,7 +186,7 @@
 		<fileSet>
 			<outputDirectory>/${artifactId}-${project.version}
 			</outputDirectory>
-			<directory>target/nuxeo-distrib/nuxeo-cap-${nuxeo.version}-tomcat</directory>
+			<directory>target/nuxeo-distrib/nuxeo-nxserver-${nuxeo.version}-tomcat</directory>
 			<includes>
 				<include>**</include>
 			</includes>
