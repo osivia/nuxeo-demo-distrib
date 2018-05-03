@@ -27,7 +27,7 @@
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-services:jar:${opentoutatice.version}
 				</include>
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-services:jar:${opentoutatice.version}
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-reporting:jar:${opentoutatice.version}
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-probes:jar:${opentoutatice.version}
                 </include>
@@ -52,6 +52,13 @@
 				</include>
 
 				<!-- Add ons -->				
+				<include>opentoutatice-ecm.drive:opentoutatice-drive:jar:${ottc.drive.version}
+				</include>
+				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
+				</include>
+				<include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
+                </include>
+				
 			<!-- 	<include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
 				</include>
 				<include>opentoutatice-ecm.file-versioning:opentoutatice-addon-file-versioning-ecm:jar:${ottc.file.versioning.version}
@@ -60,14 +67,9 @@
 				</include>
 				<include>opentoutatice-ecm.workflows-integration:opentoutatice-addon-workflows-integration-ecm:jar:${ottc.wf.version}
 				</include>
-				<include>opentoutatice-ecm.drive:opentoutatice-drive:jar:${ottc.drive.version}
-				</include>
-				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
-				</include>
 				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
                 </include>
-                <include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
-                </include> -->              
+                 -->              
 
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
@@ -131,16 +133,17 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-cas2:jar:${nuxeo.version}
 				</include>
 				<!-- Nuxeo Drive -->
-				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeodrive.version}
 				</include>
 				<include>org.nuxeo.ecm:nuxeo-drive-jsf:jar:${nuxeodrive.version}
 				</include>
 				<include>org.nuxeo.ecm:nuxeo-drive-operations:jar:${nuxeodrive.version}
 				</include>
-				<include>org.nuxeo.lib.core:nuxeo-core-storage-sql-extensions:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-elasticsearch:jar:${nuxeodrive.version}
 				</include>
-				<include>org.nuxeo.lib.wss:nuxeo-wss-front:jar:${nuxeodrive.version}
-				</include> -->
+				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core-dependencies:pom:${nuxeodrive.version}
+				</include>  -->
+				
 				<!-- Platform explorer -->
 				<!-- <include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version}
 				</include>
@@ -186,7 +189,7 @@
 		<fileSet>
 			<outputDirectory>/${artifactId}-${project.version}
 			</outputDirectory>
-			<directory>target/nuxeo-distrib/nuxeo-nxserver-${nuxeo.version}-tomcat</directory>
+			<directory>target/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}</directory>
 			<includes>
 				<include>**</include>
 			</includes>

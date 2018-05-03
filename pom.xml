@@ -19,13 +19,14 @@
 		<ottc.es.custom.version>5.0-SNAPSHOT</ottc.es.custom.version>
 		<ottc.procedure.version>5.0-SNAPSHOT</ottc.procedure.version>
 		<webmode.version>5.0-SNAPSHOT</webmode.version>
-
 		<ottc.collab.version>5.0-SNAPSHOT</ottc.collab.version>
+
+		<ottc.drive.version>5.0-SNAPSHOT</ottc.drive.version>
+		<ottc.checkin.version>5.0-SNAPSHOT</ottc.checkin.version>
+		<ottc.news.version>5.0-SNAPSHOT</ottc.news.version>
 
 		<!-- <ottc.filenaming.version>4.6</ottc.filenaming.version> <ottc.file.versioning.version>4.7</ottc.file.versioning.version> 
 			<ottc.wf.version>4.6</ottc.wf.version> <ottc.notif.version>4.7</ottc.notif.version> 
-			<nuxeodrive.version>6.0-HF44</nuxeodrive.version> <ottc.drive.version>4.6.2</ottc.drive.version> 
-			<ottc.checkin.version>4.6.1</ottc.checkin.version> <ottc.news.version>4.6</ottc.news.version> 
 			<ottc.monitoring.version>2.1</ottc.monitoring.version> -->
 
 		<demo.version>5.0-SNAPSHOT</demo.version>
@@ -33,6 +34,7 @@
 		<!-- Nx addons dependencies -->
 		<nuxeo.blogs.sites.version>7.3</nuxeo.blogs.sites.version>
 		<nuxeo.agenda.version>8.10</nuxeo.agenda.version>
+		<nuxeodrive.version>8.10-HF28</nuxeodrive.version>
 
 	</properties>
 
@@ -64,12 +66,20 @@
 							<artifactItems>
 								<artifactItem>
 									<groupId>org.nuxeo.ecm.distribution</groupId>
-									<artifactId>nuxeo-nxr-jsf-ui</artifactId>
+									<artifactId>nuxeo-server-tomcat</artifactId>
 									<version>${nuxeo.version}</version>
 									<type>zip</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/nuxeo-distrib</outputDirectory>
 								</artifactItem>
+								<artifactItem>
+									<groupId>org.nuxeo.ecm.distribution</groupId>
+									<artifactId>nuxeo-nxr-jsf-ui</artifactId>
+									<version>${nuxeo.version}</version>
+									<type>zip</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}/nxserver</outputDirectory>
+								</artifactItem> 
 							</artifactItems>
 						</configuration>
 					</execution>
@@ -202,6 +212,22 @@
 			<version>${ottc.collab.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>opentoutatice-ecm.drive</groupId>
+			<artifactId>opentoutatice-drive</artifactId>
+			<version>${ottc.drive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>opentoutatice-ecm.checkin</groupId>
+			<artifactId>opentoutatice-addon-checkin-ecm</artifactId>
+			<version>${ottc.checkin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>opentoutatice-ecm.news</groupId>
+			<artifactId>opentoutatice-addon-news-ecm</artifactId>
+			<version>${ottc.news.version}</version>
+		</dependency>
+
 		<!-- Addons -->
 		<!-- <dependency> <groupId>opentoutatice-ecm.file-based-naming</groupId> 
 			<artifactId>opentoutatice-addon-file-based-naming-ecm</artifactId> <version>${ottc.filenaming.version}</version> 
@@ -211,11 +237,7 @@
 			<artifactId>opentoutatice-addon-portal-notifications-ecm</artifactId> <version>${ottc.notif.version}</version> 
 			</dependency> <dependency> <groupId>opentoutatice-ecm.workflows-integration</groupId> 
 			<artifactId>opentoutatice-addon-workflows-integration-ecm</artifactId> <version>${ottc.wf.version}</version> 
-			</dependency> <dependency> <groupId>opentoutatice-ecm.drive</groupId> <artifactId>opentoutatice-drive</artifactId> 
-			<version>${ottc.drive.version}</version> </dependency> <dependency> <groupId>opentoutatice-ecm.checkin</groupId> 
-			<artifactId>opentoutatice-addon-checkin-ecm</artifactId> <version>${ottc.checkin.version}</version> 
-			</dependency> <dependency> <groupId>opentoutatice-ecm.news</groupId> <artifactId>opentoutatice-addon-news-ecm</artifactId> 
-			<version>${ottc.news.version}</version> </dependency> <dependency> <groupId>opentoutatice-ecm.monitoring</groupId> 
+			</dependency> <dependency> <groupId>opentoutatice-ecm.monitoring</groupId> 
 			<artifactId>opentoutatice-monitoring-ecm</artifactId> <version>${ottc.monitoring.version}</version> 
 			</dependency> -->
 
@@ -227,7 +249,7 @@
 		</dependency>
 
 
-
+		<!-- Nx addons dependencies -->
 		<!-- Agenda -->
 		<dependency>
 			<groupId>org.nuxeo.ecm.platform</groupId>
@@ -337,11 +359,6 @@
 
 		<dependency>
 			<groupId>org.nuxeo.ecm.webengine</groupId>
-			<artifactId>nuxeo-webengine-sites-core-contrib</artifactId>
-			<version>${nuxeo.blogs.sites.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.nuxeo.ecm.webengine</groupId>
 			<artifactId>nuxeo-webengine-core</artifactId>
 			<version>${nuxeo.version}</version>
 		</dependency>
@@ -360,14 +377,32 @@
 
 
 		<!-- Nuxeo Drive -->
-		<!-- <dependency> <groupId>org.nuxeo.ecm</groupId> <artifactId>nuxeo-drive-core</artifactId> 
-			<version>${nuxeodrive.version}</version> </dependency> <dependency> <groupId>org.nuxeo.ecm</groupId> 
-			<artifactId>nuxeo-drive-jsf</artifactId> <version>${nuxeodrive.version}</version> 
-			</dependency> <dependency> <groupId>org.nuxeo.ecm</groupId> <artifactId>nuxeo-drive-operations</artifactId> 
-			<version>${nuxeodrive.version}</version> </dependency> <dependency> <groupId>org.nuxeo.lib.core</groupId> 
-			<artifactId>nuxeo-core-storage-sql-extensions</artifactId> <version>${nuxeodrive.version}</version> 
-			</dependency> <dependency> <groupId>org.nuxeo.lib.wss</groupId> <artifactId>nuxeo-wss-front</artifactId> 
-			<version>${nuxeodrive.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.nuxeo.ecm</groupId>
+			<artifactId>nuxeo-drive-core</artifactId>
+			<version>${nuxeodrive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm</groupId>
+			<artifactId>nuxeo-drive-jsf</artifactId>
+			<version>${nuxeodrive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm</groupId>
+			<artifactId>nuxeo-drive-operations</artifactId>
+			<version>${nuxeodrive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm</groupId>
+			<artifactId>nuxeo-drive-elasticsearch</artifactId>
+			<version>${nuxeodrive.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm</groupId>
+			<artifactId>nuxeo-drive-core-dependencies</artifactId>
+			<type>pom</type>
+			<version>${nuxeodrive.version}</version>
+		</dependency>
 
 		<!-- Platform explorer -->
 		<!-- <dependency> <groupId>org.nuxeo.ecm.platform</groupId> <artifactId>nuxeo-apidoc-core</artifactId> 
