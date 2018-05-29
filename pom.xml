@@ -14,6 +14,8 @@
 		<nuxeo.version>8.10-HF28</nuxeo.version>
 
 		<opentoutatice.version>5.0-SNAPSHOT</opentoutatice.version>
+		
+		<nuxeo.jsf.compatibility.version>8.3</nuxeo.jsf.compatibility.version>
 
 		<ottc.es.version>5.0-SNAPSHOT</ottc.es.version>
 		<ottc.es.custom.version>5.0-SNAPSHOT</ottc.es.custom.version>
@@ -24,10 +26,10 @@
 		<ottc.drive.version>5.0-SNAPSHOT</ottc.drive.version>
 		<ottc.checkin.version>5.0-SNAPSHOT</ottc.checkin.version>
 		<ottc.news.version>5.0-SNAPSHOT</ottc.news.version>
+		<ottc.file.versioning.version>5.0-SNAPSHOT</ottc.file.versioning.version>
 
-		<!-- <ottc.filenaming.version>4.6</ottc.filenaming.version> <ottc.file.versioning.version>4.7</ottc.file.versioning.version> 
-			<ottc.wf.version>4.6</ottc.wf.version> <ottc.notif.version>4.7</ottc.notif.version> 
-			<ottc.monitoring.version>2.1</ottc.monitoring.version> -->
+		<!-- <ottc.filenaming.version>4.6</ottc.filenaming.version> <ottc.wf.version>4.6</ottc.wf.version> 
+			<ottc.notif.version>4.7</ottc.notif.version> <ottc.monitoring.version>2.1</ottc.monitoring.version> -->
 
 		<demo.version>5.0-SNAPSHOT</demo.version>
 
@@ -79,7 +81,7 @@
 									<type>zip</type>
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}/nxserver</outputDirectory>
-								</artifactItem> 
+								</artifactItem>
 							</artifactItems>
 						</configuration>
 					</execution>
@@ -203,7 +205,7 @@
 		</dependency>
 		<dependency>
 			<groupId>opentoutatice-ecm.web-mode</groupId>
-			<artifactId>opentoutatice-web-mode-ecm</artifactId>
+			<artifactId>opentoutatice-addon-web-mode-ecm</artifactId>
 			<version>${webmode.version}</version>
 		</dependency>
 		<dependency>
@@ -227,13 +229,16 @@
 			<artifactId>opentoutatice-addon-news-ecm</artifactId>
 			<version>${ottc.news.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>opentoutatice-ecm.file-versioning</groupId>
+			<artifactId>opentoutatice-addon-file-versioning-ecm</artifactId>
+			<version>${ottc.file.versioning.version}</version>
+		</dependency>
 
 		<!-- Addons -->
 		<!-- <dependency> <groupId>opentoutatice-ecm.file-based-naming</groupId> 
 			<artifactId>opentoutatice-addon-file-based-naming-ecm</artifactId> <version>${ottc.filenaming.version}</version> 
-			</dependency> <dependency> <groupId>opentoutatice-ecm.file-versioning</groupId> 
-			<artifactId>opentoutatice-addon-file-versioning-ecm</artifactId> <version>${ottc.file.versioning.version}</version> 
-			</dependency> <dependency> <groupId>opentoutatice-ecm.portal-notifications</groupId> 
+			</dependency> <dependency> > <dependency> <groupId>opentoutatice-ecm.portal-notifications</groupId> 
 			<artifactId>opentoutatice-addon-portal-notifications-ecm</artifactId> <version>${ottc.notif.version}</version> 
 			</dependency> <dependency> <groupId>opentoutatice-ecm.workflows-integration</groupId> 
 			<artifactId>opentoutatice-addon-workflows-integration-ecm</artifactId> <version>${ottc.wf.version}</version> 
@@ -247,7 +252,13 @@
 			<artifactId>demo-nx-custom</artifactId>
 			<version>${demo.version}</version>
 		</dependency>
-
+		
+		<!-- Nx dependencies -->
+		<dependency>
+			<groupId>org.nuxeo.elasticsearch</groupId>
+			<artifactId>nuxeo-elasticsearch-audit</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
 
 		<!-- Nx addons dependencies -->
 		<!-- Agenda -->
@@ -318,7 +329,29 @@
 			<version>${nuxeo.version}</version>
 		</dependency>
 
-		<!-- Blogs & Sites (deprecated) -->
+		<!-- Blogs & Sites (deprecated): needs JSF compatibility -->
+		<!-- JSF compatibility -->
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-core</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-fragments</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-html</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-jsf</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>org.nuxeo.ecm.webengine</groupId>
 			<artifactId>nuxeo-webengine-blogs</artifactId>
@@ -350,19 +383,14 @@
 			<artifactId>nuxeo-webengine-sites-core-contrib</artifactId>
 			<version>${nuxeo.blogs.sites.version}</version>
 		</dependency>
-
+		<!-- For Theme compatibility -->
 		<dependency>
 			<groupId>org.nuxeo.ecm.webengine</groupId>
-			<artifactId>nuxeo-webengine-ui</artifactId>
+			<artifactId>nuxeo-theme-webengine</artifactId>
 			<version>${nuxeo.blogs.sites.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.nuxeo.ecm.webengine</groupId>
-			<artifactId>nuxeo-webengine-core</artifactId>
-			<version>${nuxeo.version}</version>
-		</dependency>
-
+		
+		
 		<!-- Login & SSO -->
 		<dependency>
 			<groupId>org.nuxeo.ecm.platform</groupId>

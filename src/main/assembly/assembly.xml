@@ -9,7 +9,7 @@
 	<includeBaseDirectory>false</includeBaseDirectory>
 
 	<dependencySets>
-	
+
 		<dependencySet>
 			<outputDirectory>/${artifactId}-${project.version}/nxserver/plugins
 			</outputDirectory>
@@ -31,19 +31,19 @@
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-probes:jar:${opentoutatice.version}
                 </include>
-                
+
 				<include>opentoutatice-ecm.elasticsearch:opentoutatice-addon-elasticsearch-ecm:jar:${ottc.es.version}
 				</include>
 				<include>opentoutatice-ecm.elasticsearch-customizer:opentoutatice-addon-elasticsearch-customizer-ecm:jar:${ottc.es.custom.version}
 				</include>
-				<include>opentoutatice-ecm.web-mode:opentoutatice-web-mode-ecm:jar:${webmode.version}
-                </include>  
+				<include>opentoutatice-ecm.web-mode:opentoutatice-addon-web-mode-ecm:jar:${webmode.version}
+                </include>
 				<include>opentoutatice-ecm.procedures:opentoutatice-addon-procedures-ecm:jar:${ottc.procedure.version}
 				</include>
-				
+
 				<include>opentoutatice-ecm.collab-tools:opentoutatice-collab-tools-ecm:jar:${ottc.collab.version}
 				</include>
-				
+
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-web:jar:${opentoutatice.version}
 				</include>
 				<include>opentoutatice.ui:opentoutatice-jsf-portal-views:jar:${opentoutatice.version}
@@ -51,25 +51,21 @@
 				<include>opentoutatice.ui:opentoutatice-jsf-tinymce:jar:${opentoutatice.version}
 				</include>
 
-				<!-- Add ons -->				
+				<!-- Add ons -->
 				<include>opentoutatice-ecm.drive:opentoutatice-drive:jar:${ottc.drive.version}
 				</include>
 				<include>opentoutatice-ecm.checkin:opentoutatice-addon-checkin-ecm:jar:${ottc.checkin.version}
 				</include>
 				<include>opentoutatice-ecm.news:opentoutatice-addon-news-ecm:jar:${ottc.news.version}
                 </include>
-				
-			<!-- 	<include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version}
-				</include>
 				<include>opentoutatice-ecm.file-versioning:opentoutatice-addon-file-versioning-ecm:jar:${ottc.file.versioning.version}
 				</include>
-				<include>opentoutatice-ecm.portal-notifications:opentoutatice-addon-portal-notifications-ecm:jar:${ottc.notif.version}
-				</include>
-				<include>opentoutatice-ecm.workflows-integration:opentoutatice-addon-workflows-integration-ecm:jar:${ottc.wf.version}
-				</include>
-				<include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version}
-                </include>
-                 -->              
+
+				<!-- <include>opentoutatice-ecm.file-based-naming:opentoutatice-addon-file-based-naming-ecm:jar:${ottc.filenaming.version} 
+					</include> <include>opentoutatice-ecm.portal-notifications:opentoutatice-addon-portal-notifications-ecm:jar:${ottc.notif.version} 
+					</include> <include>opentoutatice-ecm.workflows-integration:opentoutatice-addon-workflows-integration-ecm:jar:${ottc.wf.version} 
+					</include> <include>opentoutatice-ecm.monitoring:opentoutatice-monitoring-ecm:jar:${ottc.monitoring.version} 
+					</include> -->
 
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-portal-sso:jar:${nuxeo.version}
@@ -79,13 +75,15 @@
 				</include>
 			</includes>
 		</dependencySet>
-	
+
 		<dependencySet>
 			<outputDirectory>/${artifactId}-${project.version}/nxserver/bundles
 			</outputDirectory>
 			<unpack>false</unpack>
 			<scope>runtime</scope>
 			<includes>
+				<!-- Audit with ES -->
+				<include>org.nuxeo.elasticsearch:nuxeo-elasticsearch-audit:jar:${nuxeo.version}</include>
 				<!-- Nuxeo Agenda -->
 				<include>org.nuxeo.ecm.platform:nuxeo-agenda-core:jar:${nuxeo.agenda.version}
 				</include>
@@ -106,15 +104,24 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-audio-jsf:jar:${nuxeo.version}
 				</include>
 				<!-- Video -->
-                <include>org.nuxeo.ecm.platform:nuxeo-platform-video-api:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-platform-video-api:jar:${nuxeo.version}
                 </include>
-                <include>org.nuxeo.ecm.platform:nuxeo-platform-video-core:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-platform-video-core:jar:${nuxeo.version}
                 </include>
-                 <include>org.nuxeo.ecm.platform:nuxeo-platform-video-convert:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-platform-video-convert:jar:${nuxeo.version}
                 </include>
-                 <include>org.nuxeo.ecm.platform:nuxeo-platform-video-jsf:jar:${nuxeo.version}
+				<include>org.nuxeo.ecm.platform:nuxeo-platform-video-jsf:jar:${nuxeo.version}
                 </include>
-				<!-- Blogs & Sites (deprecated) -->
+				<!-- Blogs & Sites (deprecated): needs JSF compatibility -->
+				<include>org.nuxeo.theme:nuxeo-theme-core:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				<include>org.nuxeo.theme:nuxeo-theme-fragments:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				<include>org.nuxeo.theme:nuxeo-theme-html:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				<include>org.nuxeo.theme:nuxeo-theme-jsf:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				
 				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.blogs.sites.version}
 				</include>
 				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs-api:jar:${nuxeo.blogs.sites.version}
@@ -127,7 +134,7 @@
 				</include>
 				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-sites-core-contrib:jar:${nuxeo.blogs.sites.version}
 				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.blogs.sites.version}
+				<include>org.nuxeo.ecm.webengine:nuxeo-theme-webengine:jar:${nuxeo.blogs.sites.version}
 				</include>
 				<!-- Login & SSO -->
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-cas2:jar:${nuxeo.version}
@@ -141,16 +148,14 @@
 				</include>
 				<include>org.nuxeo.ecm:nuxeo-drive-elasticsearch:jar:${nuxeodrive.version}
 				</include>
-				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core-dependencies:pom:${nuxeodrive.version}
-				</include>  -->
-				
+				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core-dependencies:pom:${nuxeodrive.version} 
+					</include> -->
+
 				<!-- Platform explorer -->
-				<!-- <include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version}
-				</include>
-				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-webengine:jar:${nuxeo.version}
-				</include>
-				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.version}
-				</include> -->
+				<!-- <include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version} 
+					</include> <include>org.nuxeo.ecm.platform:nuxeo-apidoc-webengine:jar:${nuxeo.version} 
+					</include> <include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.version} 
+					</include> -->
 			</includes>
 		</dependencySet>
 
@@ -175,10 +180,8 @@
 				<include>org.jsoup:jsoup:jar:1.6.3
 				</include>
 				<!-- Dependencies for Java Melody monitoring -->
-				<include>net.bull.javamelody:javamelody-core:jar:1.62.0
-                </include>
-                <include>org.jrobin:jrobin:jar:1.5.9
-                </include>
+				<!-- <include>net.bull.javamelody:javamelody-core:jar:1.62.0 </include> 
+					<include>org.jrobin:jrobin:jar:1.5.9 </include> -->
 			</includes>
 		</dependencySet>
 	</dependencySets>
@@ -193,17 +196,21 @@
 			<includes>
 				<include>**</include>
 			</includes>
-			<!-- Surcharges -->
 			<excludes>
+				<!-- Cause of use of nuxeo-nxr-jsf-ui -->
+				<exclude>nxserver/lib/slf4j-api-1.7.21.jar</exclude>
+				<!-- Surcharge -->
 				<exclude>lib/log4j.xml</exclude>
+				<!-- For JSF compatibility mode -->
+				<exclude>nxserver/bundles/nuxeo-theme-migration-${nuxeo.version}.jar</exclude>
 			</excludes>
 		</fileSet>
 
 		<!-- Templates -->
-        <fileSet>
-            <outputDirectory>/${artifactId}-${project.version}</outputDirectory>
-            <directory>src/main/resources</directory>
-        </fileSet>
+		<fileSet>
+			<outputDirectory>/${artifactId}-${project.version}</outputDirectory>
+			<directory>src/main/resources</directory>
+		</fileSet>
 	</fileSets>
 
 </assembly>
