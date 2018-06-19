@@ -31,6 +31,14 @@
 				</include>
 				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-probes:jar:${opentoutatice.version}
                 </include>
+				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-web:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice.ui:opentoutatice-jsf-portal-views:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice.ui:opentoutatice-jsf-tinymce:jar:${opentoutatice.version}
+				</include>
+				<include>opentoutatice-ecm.platform:opentoutatice-nx-services-overrider:jar:${opentoutatice.version}
+				</include> 
 
 				<include>opentoutatice-ecm.elasticsearch:opentoutatice-addon-elasticsearch-ecm:jar:${ottc.es.version}
 				</include>
@@ -43,14 +51,6 @@
 
 				<include>opentoutatice-ecm.collab-tools:opentoutatice-collab-tools-ecm:jar:${ottc.collab.version}
 				</include>
-
-				<include>opentoutatice-ecm.platform:opentoutatice-ecm-platform-web:jar:${opentoutatice.version}
-				</include>
-				<include>opentoutatice.ui:opentoutatice-jsf-portal-views:jar:${opentoutatice.version}
-				</include>
-				<include>opentoutatice.ui:opentoutatice-jsf-tinymce:jar:${opentoutatice.version}
-				</include>
-
 				<!-- Add ons -->
 				<include>opentoutatice-ecm.drive:opentoutatice-drive:jar:${ottc.drive.version}
 				</include>
