@@ -113,6 +113,9 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-video-jsf:jar:${nuxeo.version}
                 </include>
 				<!-- Blogs & Sites (deprecated): needs JSF compatibility -->
+				
+				<include>org.nuxeo.theme:nuxeo-theme-bank:jar:${nuxeo.jsf.compatibility.version}
+				</include>				
 				<include>org.nuxeo.theme:nuxeo-theme-core:jar:${nuxeo.jsf.compatibility.version}
 				</include>
 				<include>org.nuxeo.theme:nuxeo-theme-fragments:jar:${nuxeo.jsf.compatibility.version}
@@ -120,6 +123,10 @@
 				<include>org.nuxeo.theme:nuxeo-theme-html:jar:${nuxeo.jsf.compatibility.version}
 				</include>
 				<include>org.nuxeo.theme:nuxeo-theme-jsf:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				<include>org.nuxeo.theme:nuxeo-theme-webapp-compat:jar:${nuxeo.jsf.compatibility.version}
+				</include>
+				<include>org.nuxeo.theme:nuxeo-theme-webengine:jar:${nuxeo.jsf.compatibility.version}
 				</include>
 				
 				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-blogs:jar:${nuxeo.blogs.sites.version}
@@ -140,13 +147,13 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-login-cas2:jar:${nuxeo.version}
 				</include>
 				<!-- Nuxeo Drive -->
-				<include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-core:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm:nuxeo-drive-jsf:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-jsf:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm:nuxeo-drive-operations:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-operations:jar:${nuxeo.version}
 				</include>
-				<include>org.nuxeo.ecm:nuxeo-drive-elasticsearch:jar:${nuxeodrive.version}
+				<include>org.nuxeo.ecm:nuxeo-drive-elasticsearch:jar:${nuxeo.version}
 				</include>
 				<!-- <include>org.nuxeo.ecm:nuxeo-drive-core-dependencies:pom:${nuxeodrive.version} 
 					</include> -->
@@ -178,7 +185,7 @@
 				<include>net.java.dev.mistral:Operations:jar:0.9.5
 				</include>
 				<include>org.jsoup:jsoup:jar:1.6.3
-				</include>
+				</include>		
 				<!-- Dependencies for Java Melody monitoring -->
 				<!-- <include>net.bull.javamelody:javamelody-core:jar:1.62.0 </include> 
 					<include>org.jrobin:jrobin:jar:1.5.9 </include> -->
@@ -199,10 +206,26 @@
 			<excludes>
 				<!-- Cause of use of nuxeo-nxr-jsf-ui -->
 				<exclude>nxserver/lib/slf4j-api-1.7.21.jar</exclude>
-				<!-- Surcharge -->
-				<exclude>lib/log4j.xml</exclude>
+				<!-- Surcharge 
+				<exclude>lib/log4j.xml</exclude>-->
 				<!-- For JSF compatibility mode -->
 				<exclude>nxserver/bundles/nuxeo-theme-migration-${nuxeo.version}.jar</exclude>
+			</excludes>
+		</fileSet>
+		
+		<!-- JSF-UI -->
+		<fileSet>
+			<outputDirectory>/${artifactId}-${project.version}/nxserver
+			</outputDirectory>
+			<directory>target/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}/tmp/jsf-ui/install</directory>
+			<!-- 
+			<includes>
+				<include>**</include>
+			</includes>
+			 -->
+			<excludes>
+				<!-- For JSF compatibility mode -->
+				<exclude>**/nuxeo-theme-migration-${nuxeo.version}.jar</exclude>
 			</excludes>
 		</fileSet>
 

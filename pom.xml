@@ -11,7 +11,7 @@
 	<packaging>pom</packaging>
 
 	<properties>
-		<nuxeo.version>8.10-HF28</nuxeo.version>
+		<nuxeo.version>8.10-HF30</nuxeo.version>
 
 		<opentoutatice.version>5.0-SNAPSHOT</opentoutatice.version>
 		
@@ -36,8 +36,6 @@
 		<!-- Nx addons dependencies -->
 		<nuxeo.blogs.sites.version>7.3</nuxeo.blogs.sites.version>
 		<nuxeo.agenda.version>8.10</nuxeo.agenda.version>
-		<nuxeodrive.version>8.10-HF28</nuxeodrive.version>
-
 	</properties>
 
 	<build>
@@ -74,6 +72,7 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/nuxeo-distrib</outputDirectory>
 								</artifactItem>
+								<!-- 
 								<artifactItem>
 									<groupId>org.nuxeo.ecm.distribution</groupId>
 									<artifactId>nuxeo-nxr-jsf-ui</artifactId>
@@ -82,13 +81,21 @@
 									<overWrite>true</overWrite>
 									<outputDirectory>${project.build.directory}/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}/nxserver</outputDirectory>
 								</artifactItem>
+								 -->
+								<artifactItem>
+									<groupId>org.nuxeo.ecm.distribution</groupId>
+									<artifactId>nuxeo-marketplace-jsf-ui</artifactId>
+									<version>${nuxeo.version}</version>
+									<type>zip</type>
+									<overWrite>true</overWrite>
+									<outputDirectory>${project.build.directory}/nuxeo-distrib/nuxeo-server-tomcat-${nuxeo.version}/tmp/jsf-ui</outputDirectory>
+								</artifactItem>								 
 							</artifactItems>
 						</configuration>
 					</execution>
 				</executions>
 
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
@@ -112,7 +119,6 @@
 				</executions>
 
 			</plugin>
-
 			<!-- Release -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -333,6 +339,11 @@
 		<!-- JSF compatibility -->
 		<dependency>
 			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-bank</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
 			<artifactId>nuxeo-theme-core</artifactId>
 			<version>${nuxeo.jsf.compatibility.version}</version>
 		</dependency>
@@ -351,6 +362,17 @@
 			<artifactId>nuxeo-theme-jsf</artifactId>
 			<version>${nuxeo.jsf.compatibility.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-webapp-compat</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.theme</groupId>
+			<artifactId>nuxeo-theme-webengine</artifactId>
+			<version>${nuxeo.jsf.compatibility.version}</version>
+		</dependency>
+				
 		
 		<dependency>
 			<groupId>org.nuxeo.ecm.webengine</groupId>
@@ -403,34 +425,35 @@
 			<version>${nuxeo.version}</version>
 		</dependency>
 
-
 		<!-- Nuxeo Drive -->
 		<dependency>
 			<groupId>org.nuxeo.ecm</groupId>
 			<artifactId>nuxeo-drive-core</artifactId>
-			<version>${nuxeodrive.version}</version>
+			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm</groupId>
 			<artifactId>nuxeo-drive-jsf</artifactId>
-			<version>${nuxeodrive.version}</version>
+			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm</groupId>
 			<artifactId>nuxeo-drive-operations</artifactId>
-			<version>${nuxeodrive.version}</version>
+			<version>${nuxeo.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.nuxeo.ecm</groupId>
 			<artifactId>nuxeo-drive-elasticsearch</artifactId>
-			<version>${nuxeodrive.version}</version>
+			<version>${nuxeo.version}</version>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>org.nuxeo.ecm</groupId>
 			<artifactId>nuxeo-drive-core-dependencies</artifactId>
 			<type>pom</type>
-			<version>${nuxeodrive.version}</version>
+			<version>${nuxeo.version}</version>
 		</dependency>
+		 -->
 
 		<!-- Platform explorer -->
 		<!-- <dependency> <groupId>org.nuxeo.ecm.platform</groupId> <artifactId>nuxeo-apidoc-core</artifactId> 
