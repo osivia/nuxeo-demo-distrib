@@ -5,14 +5,14 @@
 
 	<groupId>org.osivia.demo</groupId>
 	<artifactId>demo-nx-distrib</artifactId>
-	<version>4.7.1</version>
+	<version>4.7-SNAPSHOT</version>
 	<name>Démo nuxeo distribution</name>
 	<packaging>pom</packaging>
 
 	<properties>
 		<nuxeo.version>6.0-HF44</nuxeo.version>
 		<nuxeodrive.version>6.0-HF44</nuxeodrive.version>
-		<opentoutatice.version>4.7.1</opentoutatice.version>
+		<opentoutatice.version>4.7.5</opentoutatice.version>
 		<ottc.es.version>4.7</ottc.es.version>
 		<ottc.collab.version>4.7</ottc.collab.version>
 		<ottc.filenaming.version>4.6</ottc.filenaming.version>
@@ -33,7 +33,7 @@
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
 		<demo.version>4.7</demo.version>
-		<webmode.version>4.7</webmode.version>
+		<webmode.version>4.7.1</webmode.version>
 		
 	</properties>
 

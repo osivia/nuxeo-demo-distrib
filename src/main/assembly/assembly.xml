@@ -81,8 +81,6 @@
 				<include>org.nuxeo.ecm.platform:nuxeo-agenda:jar:${nuxeo.version}
 				</include>
 				<!-- Nuxeo Imaging -->
-				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-api:jar:${nuxeo.version}
-				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-convert:jar:${nuxeo.version}
 				</include>
 				<include>org.nuxeo.ecm.platform:nuxeo-platform-imaging-core:jar:${nuxeo.version}
