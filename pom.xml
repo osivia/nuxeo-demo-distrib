@@ -456,11 +456,21 @@
 		 -->
 
 		<!-- Platform explorer -->
-		<!-- <dependency> <groupId>org.nuxeo.ecm.platform</groupId> <artifactId>nuxeo-apidoc-core</artifactId> 
-			<version>${nuxeo.version}</version> </dependency> <dependency> <groupId>org.nuxeo.ecm.platform</groupId> 
-			<artifactId>nuxeo-apidoc-webengine</artifactId> <version>${nuxeo.version}</version> 
-			</dependency> <dependency> <groupId>org.nuxeo.ecm.webengine</groupId> <artifactId>nuxeo-webengine-ui</artifactId> 
-			<version>${nuxeo.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-apidoc-core</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.platform</groupId>
+			<artifactId>nuxeo-apidoc-webengine</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.nuxeo.ecm.webengine</groupId>
+			<artifactId>nuxeo-webengine-ui</artifactId>
+			<version>${nuxeo.version}</version>
+		</dependency>
 
 
 		<!-- Dependencies for imaging -->

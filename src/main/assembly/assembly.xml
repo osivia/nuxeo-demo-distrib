@@ -159,10 +159,12 @@
 					</include> -->
 
 				<!-- Platform explorer -->
-				<!-- <include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version} 
-					</include> <include>org.nuxeo.ecm.platform:nuxeo-apidoc-webengine:jar:${nuxeo.version} 
-					</include> <include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.version} 
-					</include> -->
+				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-core:jar:${nuxeo.version} 
+				</include>
+				<include>org.nuxeo.ecm.platform:nuxeo-apidoc-webengine:jar:${nuxeo.version} 
+				</include>
+				<include>org.nuxeo.ecm.webengine:nuxeo-webengine-ui:jar:${nuxeo.version} 
+				</include>
 			</includes>
 		</dependencySet>
 
