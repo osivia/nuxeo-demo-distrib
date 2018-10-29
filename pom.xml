@@ -26,9 +26,12 @@
 		<ottc.checkin.version>4.6.1</ottc.checkin.version> 
 
 		<ottc.es.custom.version>4.7</ottc.es.custom.version>
-		<ottc.procedure.version>4.7</ottc.procedure.version>
+		<ottc.procedure.version>4.7-SNAPSHOT</ottc.procedure.version>
 		
 		<ottc.news.version>4.6</ottc.news.version>
+		
+		<ottc.jwt.version>4.7-SNAPSHOT</ottc.jwt.version>
+		<ottc.onlyoffice.version>4.7-SNAPSHOT</ottc.onlyoffice.version>
 		
 		<ottc.monitoring.version>2.1</ottc.monitoring.version>
 		
@@ -217,6 +220,16 @@
             <artifactId>opentoutatice-addon-news-ecm</artifactId>
             <version>${ottc.news.version}</version>
         </dependency>
+        <dependency>
+            <groupId>opentoutatice-ecm.jwt</groupId>
+            <artifactId>opentoutatice-addon-jwt-ecm</artifactId>
+            <version>${ottc.jwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>opentoutatice-ecm.onlyoffice</groupId>
+        	<artifactId>opentoutatice-addon-onlyoffice-ecm</artifactId>
+            <version>${ottc.onlyoffice.version}</version>
+		</dependency>        
 		<dependency>
             <groupId>opentoutatice-ecm.web-mode</groupId>
             <artifactId>opentoutatice-web-mode-ecm</artifactId>
@@ -447,6 +460,28 @@
             <artifactId>jrobin</artifactId>
             <version>1.5.9</version>
         </dependency>
+        
+<!-- JWT lib -->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>2.9.2</version>
+		</dependency>        
 		
 	</dependencies>
 
