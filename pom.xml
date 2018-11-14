@@ -5,7 +5,7 @@
 
 	<groupId>org.osivia.demo</groupId>
 	<artifactId>demo-nx-distrib</artifactId>
-	<version>4.7.4</version>
+	<version>4.7-SNAPSHOT</version>
 	<name>Démo nuxeo distribution</name>
 	<packaging>pom</packaging>
 
